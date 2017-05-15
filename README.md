@@ -2,7 +2,7 @@
 
 ## What
 
-This slider panel is part of a homemade toolset of modules to simplify the r&d phase of my µ-controller projects. It consists of four [linear slider potentiometers](pdf-files/Bourns slider potentiometer datasheet.pdf), which are connected as [voltage dividers](https://en.wikipedia.org/wiki/Voltage_divider). Built with the component values as stated in the bill-of-materials, the panel is optimized for 0 to 5V ADC's. Thanks to its universal layout, the module can easily be adapted for other voltage ranges, by changing the resistor values.
+This slider panel is part of a homemade toolset of modules to simplify the r&d phase of my µ-controller projects. It consists of four [linear slider potentiometers](pdf-files/Bourns-slider-potentiometer-datasheet.pdf), which are connected as [voltage dividers](https://en.wikipedia.org/wiki/Voltage_divider). Built with the component values as stated in the bill-of-materials, the panel is optimized for 0 to 5V ADC's. Thanks to its universal layout, the module can easily be adapted for other voltage ranges, by changing the resistor values.
 
 [![Analogue input Slider panel - top view](images/Slider-panel-topview-s.png)](images/Slider-panel-topview.png)
 
@@ -18,7 +18,7 @@ Whilst playing around with µ-controllers and their peripherals, I got often con
 ## How
 
 Simple projects don't need complicated specifications. However once you start, there's always a couple of nice-to-haves you just have to go for.
- - The [slider potentiometers](pdf-files/Bourns slider potentiometer datasheet.pdf) should  
+ - The [slider potentiometers](pdf-files/Bourns-slider-potentiometer-datasheet.pdf) should  
     - have a reasonable travel length for precision
     - have a linear taper
     - have a center detent
@@ -27,7 +27,7 @@ Simple projects don't need complicated specifications. However once you start, t
  - The [housing](#mechanical-construction) should have
     - an ID for each slider
     - labels for each pin on the interface connector
- - And the whole must be **fancy** :sunglasses:
+ - And the whole must be **fancy** :sunglasses: !
 
 ## Progress status
 
