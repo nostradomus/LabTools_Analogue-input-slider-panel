@@ -2,7 +2,7 @@
 
 ## What
 
-![Analogue input sliders panel - top view](images/Sliders-panel-topview-s.png)
+[![Analogue input sliders panel - top view](images/Sliders-panel-topview-s.png)](images/Sliders-panel-topview.png) 
 
 `...more on the way, be patient...`
 
@@ -35,9 +35,13 @@
 
 #### The PCB
 
+[![Analogue input sliders panel - pcb view](images/Sliders-panel-pcbview-s.png)](images/Sliders-panel-pcbview.png)
+
 `...on the way, be patient...`
 
 #### Connection with a µ-controller board
+
+[![Analogue input sliders panel - interface view](images/Sliders-panel-interface-s.png)](images/Sliders-panel-interface.png)
 
 `...on the way, be patient...`
 
@@ -58,6 +62,8 @@ The demo/test software has been written in the free [Arduino IDE](https://www.ar
 ### Mechanical construction
 
 The housing consists of two layers of lasercut and engraved plexi plates. I would suggest to use 3mm of thickness. When using another thickness, pay attention to adapt the length of screws and bolts.
+
+[![Analogue input sliders panel - front view](images/Sliders-panel-frontview-s.png)](images/Sliders-panel-frontview.png)
 
 `...on the way, be patient...`
 
