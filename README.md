@@ -2,9 +2,9 @@
 
 ## What
 
-This slider panel is part of a homemade toolset of modules to simplify the r&d phase of my µ-controller projects. It consists of four linear slider potentiometers, which are connected as voltage dividers. Built with the component values as stated in the bill-of-materials, the panel is optimized for 0 to 5V ADC's. Thanks to its universal layout, the module can easily be adapted for other voltage ranges, by using other resistor values.
+This slider panel is part of a homemade toolset of modules to simplify the r&d phase of my µ-controller projects. It consists of four linear slider potentiometers, which are connected as voltage dividers. Built with the component values as stated in the bill-of-materials, the panel is optimized for 0 to 5V ADC's. Thanks to its universal layout, the module can easily be adapted for other voltage ranges, by changing the resistor values.
 
-[![Analogue input sliders panel - top view](images/Sliders-panel-topview-s.png)](images/Sliders-panel-topview.png)
+[![Analogue input Slider panel - top view](images/Slider-panel-topview-s.png)](images/Slider-panel-topview.png)
 
 ## Why
 
@@ -40,13 +40,13 @@ Whilst playing around with µ-controllers and their peripherals, I got often con
 
 #### The PCB
 
-[![Analogue input sliders panel - pcb view](images/Sliders-panel-pcbview-s.png)](images/Sliders-panel-pcbview.png)
+[![Analogue input Slider panel - pcb view](images/Slider-panel-pcbview-s.png)](images/Slider-panel-pcbview.png)
 
 `...on the way, be patient...`
 
 #### Connection with a µ-controller board
 
-[![Analogue input sliders panel - interface view](images/Sliders-panel-interface-s.png)](images/Sliders-panel-interface.png)
+[![Analogue input Slider panel - interface view](images/Slider-panel-interface-s.png)](images/Slider-panel-interface.png)
 
 `...on the way, be patient...`
 
@@ -68,7 +68,7 @@ The demo/test software has been written in the free [Arduino IDE](https://www.ar
 
 The housing consists of two layers of lasercut and engraved plexi plates. I would suggest to use 3mm of thickness. When using another thickness, pay attention to adapt the length of screws and bolts.
 
-[![Analogue input sliders panel - front view](images/Sliders-panel-frontview-s.png)](images/Sliders-panel-frontview.png)
+[![Analogue input Slider panel - front view](images/Slider-panel-frontview-s.png)](images/Slider-panel-frontview.png)
 
 `...on the way, be patient...`
 
