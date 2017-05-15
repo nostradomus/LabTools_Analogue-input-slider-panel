@@ -1,14 +1,19 @@
-# Analogue input sliders panel
+# **LabTools** : Analogue input slider panel
 
 ## What
 
-[![Analogue input sliders panel - top view](images/Sliders-panel-topview-s.png)](images/Sliders-panel-topview.png) 
+This slider panel is part of a homemade toolset of modules to simplify the r&d phase of my µ-controller projects. It consists of four linear slider potentiometers, which are connected as voltage dividers. Built with the component values as stated in the bill-of-materials, the panel is optimized for 0 to 5V ADC's. Thanks to its universal layout, the module can easily be adapted for other voltage ranges, by using other resistor values.
 
-`...more on the way, be patient...`
+[![Analogue input sliders panel - top view](images/Sliders-panel-topview-s.png)](images/Sliders-panel-topview.png)
 
 ## Why
 
-`...more on the way, be patient...`
+Whilst playing around with µ-controllers and their peripherals, I got often confronted with the need for analogue values for various reasons.
+ - When designing a [ternary clock](https://github.com/nostradomus/Base3-clock) I had a need to mix my own cool colors to display with the RGB LED's in this project. The slider panel was just what I needed, as I could easily simulate the three color channels red, green and blue, plus the brightness on the fourth slider.
+ - Next on a rainy Sunday, we decided to have some fun, and build our version of the [cool O++O robot](https://github.com/OttoDIY/OttoDIY). This cute little guy is running, or rather, dancing on four servos. In a project with *constrainted* movements, it is interesting to test the mechanical limits of your rotations before breaking any of your nice 3D-printed parts. YAGA ! **Yet another good application** for the slider panel.
+ - When working with servos, not only the angular limits are important, but for several applications also the center point of the circular movement. This came in handy for a robot arm project based on radial coordinates.  
+ - A completely different, but obvious example, was application testing. For practical reasons, most of the time, it is preferable to replace physical sensors by **controlled** test values. In pure programming these usually originate from test units. With this type of methodology however, it is utmost impossible to do exhaustive testing. Especially when combining multiple analogue values. For that matter, as an extra test, the slider panel has proven to be very handy.  
+ - And their will probably be dozens of other useful applications for this little lab tool...
 
 ## How
 
