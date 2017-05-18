@@ -27,7 +27,7 @@ Simple projects don't need complicated specifications. However once you start, t
  - The [housing](#mechanical-construction) should have
     - an ID for each slider
     - labels for each pin on the interface connector
- - And the whole must be **fancy** :sunglasses: !
+ - And the whole thing must be **fancy** :sunglasses: !
 
 ## Progress status
 
@@ -45,13 +45,19 @@ Simple projects don't need complicated specifications. However once you start, t
 
 `...on the way, be patient...`
 
-### Electronics
+### The Electronics
+
+#### The Schematic
+
+The electronics setup is straightforward and easy to understand. Four variable resistors P1 to P4 (linear sliders), or potentiometers are connected between +5V and ground. Depending on the position, the slider-pin will output a voltage between 0 and 5V. This can be directly connected to your µ-controller's analogue input, or ADC. The (optional) LED's in the slider button have been fit with 2,7kΩ resistors (R1 to R4), to limit the current flowing through, and to not make you blind :sunglasses:. For connector CON1, a **90° bent** 10x1 pin-header is preferred, for easy access in combination with the laser-cut housing.
+
+[![Schematic design](images/Slider-panel-schematic-s.png)](images/Slider-panel-schematic.png)
 
 #### The PCB
 
-[![Analogue input Slider panel - pcb view](images/Slider-panel-pcbview-s.png)](images/Slider-panel-pcbview.png)
+The PCB has been designed single-sided with wide traces for "kitchen-brew" production. The larger pcb size and generous spacing between the potentiometers is mainly for ergonomical reasons. Be precise when drilling the holes in the pcb, as the quality of the mechanical construction depends on correct positioning of the potentiometers and the four mounting holes. 
 
-`...on the way, be patient...`
+[![PCB design](images/Slider-panel-pcb-s.png)](images/Slider-panel-pcb.png)
 
 #### Connection with a µ-controller board
 
@@ -69,7 +75,7 @@ The demo/test software has been written in the free [Arduino IDE](https://www.ar
 
 `...on the way, be patient...`
 
-#### Application example 2 : RGB LED color calibration
+#### Application example 2 : RGB LED color mixer
 
 `...on the way, be patient...`
 
