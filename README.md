@@ -10,7 +10,7 @@ This slider panel is part of a homemade toolset of modules to simplify the r&d p
 
 Whilst playing around with µ-controllers and their peripherals, I got often confronted with the need for analogue values for various reasons.
  - When designing a [ternary clock](https://github.com/nostradomus/Base3-clock) I had a need to mix my own cool colors to display with the RGB LED's in this project. The slider panel was just what I needed, as I could easily simulate the three color channels red, green and blue, plus the brightness on the fourth slider.
- - Next on a rainy Sunday, we decided to have some fun, and build our version of the [cool O++O robot](https://github.com/OttoDIY/OttoDIY). This cute little guy is running, or rather, dancing on four servos. In a project with *constrainted* movements, it is interesting to test the mechanical limits of your rotations before breaking any of your nice 3D-printed parts. YAGA ! **Yet another good application** for the slider panel.
+ - Next on a rainy Sunday, we decided to have some fun, and build our version of the [cool O++O robot](https://github.com/OttoDIY/OttoDIY). This cute little guy is running, or rather, dancing on four servos. In a project with *constrainted* movements, it is interesting to test the mechanical limits of your rotations before breaking any of your nice 3D-printed parts. YAGA ! **Yet another great application** for the slider panel.
  - When working with servos, not only the angular limits are important, but for several applications also the center point of the circular movement. This came in handy for a robot arm project based on radial coordinates.  
  - A completely different, but obvious example, was application testing. For practical reasons, most of the time, it is preferable to replace physical sensors by **controlled** test values. In pure programming these usually originate from test units. With this type of methodology however, it is utmost impossible to do exhaustive testing. Especially when combining multiple analogue values. For that matter, as an extra test, the slider panel has proven to be very handy.  
  - And their will probably be dozens of other useful applications for this little lab tool...
@@ -49,13 +49,13 @@ Simple projects don't need complicated specifications. However once you start, t
 
 #### The Schematic
 
-The electronics setup is straightforward and easy to understand. Four variable resistors P1 to P4 (linear sliders), or potentiometers are connected between +5V and ground. Depending on the position, the slider-pin will output a voltage between 0 and 5V. This can be directly connected to your µ-controller's analogue input, or ADC. The (optional) LED's in the slider button have been fit with 2,7kΩ resistors (R1 to R4), to limit the current flowing through, and to not make you blind :sunglasses:. For connector CON1, a **90° bent** 10x1 pin-header is preferred, for easy access in combination with the laser-cut housing.
+The electronics setup is straightforward and easy to understand. Four [variable resistors P1 to P4 (linear sliders), or potentiometers](pdf-files/Bourns-slider-potentiometer-datasheet.pdf) are connected between +5V and ground. Depending on the position, the slider-pin will output a voltage between 0 and 5V. This can be directly connected to your µ-controller's analogue input, or ADC. The (optional) LED's in the slider button have been fit with 2,7kΩ resistors (R1 to R4), to limit the current flowing through, and to not make you blind :sunglasses:. For connector CON1, a **90° bent** 10x1 pin-header is preferred, for easy access in combination with the laser-cut housing.
 
 [![Schematic design](images/Slider-panel-schematic-s.png)](images/Slider-panel-schematic.png)
 
 #### The PCB
 
-The PCB has been designed single-sided with wide traces for "kitchen-brew" production. The larger pcb size and generous spacing between the potentiometers is mainly for ergonomical reasons. Be precise when drilling the holes in the pcb, as the quality of the mechanical construction depends on correct positioning of the potentiometers and the four mounting holes. 
+The PCB has been designed single-sided with wide traces for "kitchen-brew" production. The larger pcb size and generous spacing between the [potentiometers](pdf-files/Bourns-slider-potentiometer-datasheet.pdf) is mainly for ergonomical reasons. Be precise when drilling the holes in the pcb, as the quality of the mechanical construction depends on correct positioning of the potentiometers and the four mounting holes.
 
 [![PCB design](images/Slider-panel-pcb-s.png)](images/Slider-panel-pcb.png)
 
@@ -85,7 +85,12 @@ The housing consists of two layers of lasercut and engraved plexi plates. I woul
 
 [![Analogue input Slider panel - front view](images/Slider-panel-frontview-s.png)](images/Slider-panel-frontview.png)
 
-`...on the way, be patient...`
+Material :
+ - 4 nylon bolts, M3 x 8
+ - 8 nylon nuts, M3
+ - 8 metal screws, M2 x 4 (optionally with conic head)
+
+The four nylon bolts fit in the four holes of the rear plexi plate. The heads should be down, as they will serve as feet for the module. The rear panel has to be turned, in a way that the connector info (GND-P1-L1-P2...) is readable on the top. Next four nylon bolts are fit on the threading (which points up). These standard bolts are thick enough to serve as spacers for the PCB, which has to be fit on top. The other four nylon bolts will be used to fix the PCB. The front plate (with 1-2-3-4 on top) is fixed on the metal slider housings with the 8 metal screws. The prototype has been built with standard flat-head screws. The 3mm plexi is however thick enough to be adapted for screws with a conic head (extra milling required).
 
 ## Contributors
 
