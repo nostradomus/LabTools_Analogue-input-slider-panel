@@ -82,9 +82,8 @@ In a minimum setup, pins 1 and 10 (power and ground), and at least one Px output
 
 ### µ-Controller code
 
-The demo/test software has been written in the free [Arduino IDE](https://www.arduino.cc/en/Main/Software), or as [sourcecode](https://github.com/arduino/Arduino/). No specific (or non-standard) libraries are required for this project.
-
-`...on the way...`
+The demo/test software has been written in the free [Arduino IDE](https://www.arduino.cc/en/Main/Software), or as [sourcecode](https://github.com/arduino/Arduino/).
+These examples are using the servo library, which is included in the [Arduino IDE software](https://www.arduino.cc/en/Main/Software), and [Adafruit's Neopixel library](https://github.com/adafruit/Adafruit_NeoPixel). All sketches can be found in the [source-folder](source/). 
 
 #### Application example 1 : Robot-arm servo calibration
 
@@ -92,7 +91,7 @@ The demo/test software has been written in the free [Arduino IDE](https://www.ar
 
 #### Application example 2 : RGB LED color mixer
 
-`...on the way...`
+A basic [color mixer application](source/RGB-LED-color-mixer.ino) is available in the [source-folder](source/). The Arduino sketch contains extensive comments on how to connect and run the application. The basic idea is to brew your own color by mixing R(ed), G(reen) and B(lue) until you like the result visually. Next, in the serial monitor, you can read the settings to be used in your future application (0..255,0..255,0..255). Slider number 4 will let you play with the overall brightness, and provide feedback in the serial monitor accordingly. When starting the application, the serial monitor will provide connection and setup info, followed by a short LED test.
 
 ### Mechanical construction
 
