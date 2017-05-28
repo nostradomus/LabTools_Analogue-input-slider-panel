@@ -43,7 +43,7 @@ Simple projects don't need complicated specifications. However once you start, t
 
 ### The voltage divider, the ADC and the mapping function
 
-`...on the way, be patient...`
+`...on the way...`
 
 ### The Electronics
 
@@ -61,23 +61,38 @@ The PCB has been designed single-sided with wide traces for "kitchen-brew" produ
 
 #### Connection with a µ-controller board
 
-[![Analogue input Slider panel - interface view](images/Slider-panel-interface-s.png)](images/Slider-panel-interface.png)
+The board has been designed with a 10-way (90° bent) pin-header for easy connection with standard Dupont lines, typically used for testing during breadboard phase.
 
-`...on the way, be patient...`
+pin|name|description
+-|-----|----------------------------------
+1|GND  | ground
+2|LED1 | indicator led on potentiometer 1
+3|P1   | variable output on potentiometer 1
+4|LED2 | indicator led on potentiometer 2
+5|P2   | variable output on potentiometer 2
+6|LED3 | indicator led on potentiometer 3
+7|P3   | variable output on potentiometer 3
+8|LED4 | indicator led on potentiometer 4
+9|P4   | variable output on potentiometer 4
+10|+5V | 5 volt power Connection
+
+In a minimum setup, pins 1 and 10 (power and ground), and at least one Px output need to be connected. When using an Arduino eco-system, the potentiometer's variable output can be connected directly to any of the µ-controller's analogue inputs which accept 0 to 5V. The *optional* led connections can either be connected directly to the ground (always ON), or to a digital output of the µ-controller (capable of sinking at least 10mA). When building the full project (lasercut plexi included), you will see the connection descriptors engraved in the rear-panel, just above the pin-header.
+
+[![Analogue input Slider panel - interface view](images/Slider-panel-interface-s.png)](images/Slider-panel-interface.png)
 
 ### µ-Controller code
 
 The demo/test software has been written in the free [Arduino IDE](https://www.arduino.cc/en/Main/Software), or as [sourcecode](https://github.com/arduino/Arduino/). No specific (or non-standard) libraries are required for this project.
 
-`...on the way, be patient...`
+`...on the way...`
 
 #### Application example 1 : Robot-arm servo calibration
 
-`...on the way, be patient...`
+`...on the way...`
 
 #### Application example 2 : RGB LED color mixer
 
-`...on the way, be patient...`
+`...on the way...`
 
 ### Mechanical construction
 
