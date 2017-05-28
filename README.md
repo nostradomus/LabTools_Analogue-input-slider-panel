@@ -63,18 +63,18 @@ The PCB has been designed single-sided with wide traces for "kitchen-brew" produ
 
 The board has been designed with a 10-way (90° bent) pin-header for easy connection with standard Dupont lines, typically used for testing during breadboard phase.
 
-pin|name|description
--|-----|----------------------------------
-1|GND  | ground
-2|LED1 | indicator led on potentiometer 1
-3|P1   | variable output on potentiometer 1
-4|LED2 | indicator led on potentiometer 2
-5|P2   | variable output on potentiometer 2
-6|LED3 | indicator led on potentiometer 3
-7|P3   | variable output on potentiometer 3
-8|LED4 | indicator led on potentiometer 4
-9|P4   | variable output on potentiometer 4
-10|+5V | 5 volt power Connection
+:electric_plug:|name |description
+---------------|-----|----------------------------------
+:one:          |GND  | ground
+:two:          |LED1 | indicator led on potentiometer 1
+:three:        |P1   | variable output on potentiometer 1
+:four:         |LED2 | indicator led on potentiometer 2
+:five:         |P2   | variable output on potentiometer 2
+:six:          |LED3 | indicator led on potentiometer 3
+:seven:        |P3   | variable output on potentiometer 3
+:eight:        |LED4 | indicator led on potentiometer 4
+:nine:         |P4   | variable output on potentiometer 4
+:keycap_ten:   |+5V  | 5 volt power Connection
 
 In a minimum setup, pins 1 and 10 (power and ground), and at least one Px output need to be connected. When using an Arduino eco-system, the potentiometer's variable output can be connected directly to any of the µ-controller's analogue inputs which accept 0 to 5V. The *optional* led connections can either be connected directly to the ground (always ON), or to a digital output of the µ-controller (capable of sinking at least 10mA). When building the full project (lasercut plexi included), you will see the connection descriptors engraved in the rear-panel, just above the pin-header.
 
@@ -83,11 +83,11 @@ In a minimum setup, pins 1 and 10 (power and ground), and at least one Px output
 ### µ-Controller code
 
 The demo/test software has been written in the free [Arduino IDE](https://www.arduino.cc/en/Main/Software), or as [sourcecode](https://github.com/arduino/Arduino/).
-These examples are using the servo library, which is included in the [Arduino IDE software](https://www.arduino.cc/en/Main/Software), and [Adafruit's Neopixel library](https://github.com/adafruit/Adafruit_NeoPixel). All sketches can be found in the [source-folder](source/). 
+These examples are using the [servo library](https://www.arduino.cc/en/Reference/Servo), which is included in the Arduino IDE software, and [Adafruit's Neopixel library](https://github.com/adafruit/Adafruit_NeoPixel). All sketches can be found in the [source-folder](source/).
 
 #### Application example 1 : Robot-arm servo calibration
 
-`...on the way...`
+A basic [servo calibration application](source/robotarm-servo-calibration.ino) is available in the [source-folder](source/). The Arduino sketch contains extensive comments on how to connect and run the application. The basic idea is to first find the clockwise and counterclockwise limits of a servo inside your mechanical construction. Secondly, in many construction you might also be interested in the mid-point between these to limits. And, this is not necessarily CW plus CCW divided by two ! Next, in the serial monitor, you can read the settings to be used in your future application. By using the CW and CCW limits as parameters 4 and 5 in the mapping function, you can easily prevent mechanical overshoot (and damage) while fine-tuning your mechanics. Before connecting your mechanical construction, it be a good idea to set the slider potentiometers at 50%, and to position your servos about half-way of their possible movement. When starting the application, the serial monitor will provide connection and setup info. Next, the software will slowly move the servos to the position as preset by the potentiometers. Once the sketch reaches the main-loop, things will be more reactive. So, handle with care :collision: :exclamation:
 
 #### Application example 2 : RGB LED color mixer
 
