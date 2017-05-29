@@ -1,5 +1,5 @@
 //***************************************************
-//**              TERNARY CLOCK                    **
+//**            RGB LED color mixer                **
 //**                                               **
 //**   author : Carl - (c)2017                     **
 //**   version : 1.0                               **
@@ -55,7 +55,7 @@ void setup() {
   Serial.begin(115200);                            // initialize the serial communication 
   Serial.println(".");
   Serial.println("*********************************************************");
-  Serial.println("**              RGB color tester - (c)2017             **");
+  Serial.println("**             RGB LED color mixer - (c)2017           **");
   Serial.println("**  - Serial communication initialized                 **");
   strip.begin();
 
