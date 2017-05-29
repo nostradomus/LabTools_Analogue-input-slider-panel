@@ -115,9 +115,10 @@ void loop() {
 
 // calibrate the colors with the slider potentiometers on analogue inputs A0 to A3
 // the analogue slider and serial monitor need to be connected to use this function
-// send mode "9" via serial, and read-out the shown color 
+// read-out the shown color on the serial monitor 
 void runColorCalibrationProcedure() {
-      int Rpot, Gpot, Bpot, bLevelpot;                 // analogue values from the potentiometers
+      // analogue values from the potentiometers
+      int Rpot, Gpot, Bpot, bLevelpot;                 
       int checksum = 0;
       // read the current values on the analogue inputs
       Rpot = analogRead(A0);
