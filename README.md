@@ -43,8 +43,18 @@ Simple projects don't need complicated specifications. However once you start, t
 
 ### The voltage divider, the ADC and the mapping function
 
-`...on the way...`
+The whole setup of this mini-project is based on three crucial denominators, two in the electronics, and one in software.
 
+The first part of the magic happens inside the potentiometer which is connected as a [voltage divider](https://en.wikipedia.org/wiki/Voltage_divider). Some current will flow from +5V to ground through the 10kΩ resistor. The third wire (or center tap) of the potentiometer gives us a variable connection on that 10kΩ range, which actually splits it into two resistors (which add up to be the full resistance). In such a passive resistive-only circuit, the center tap will output a voltage which is proportional to the total potential, the same way as the fractions of the two resistors are to the total resistance. Next, as the [chosen slider potentiometer](pdf-files/Bourns-slider-potentiometer-datasheet.pdf) is of good linear quality, the output will even be equally proportional to the slider's position on the total slider travel length.  
+
+The second step is where the µ-controller will convert this (physical) voltage in a software readable value. This is called an [ADC, or analogue-to-digital converter](https://en.wikipedia.org/wiki/Analog-to-digital_converter). They exist in numerous varieties of architectures, conversion types, speeds, precision... For the below examples, I will use the [ATmega328p](pdf-files/datasheet-ATmega328P.pdf)'s built-in ADC's. They are marked as A0, A1, A2... Being of 10-bit precision, the conversion of the 0 to 5V voltage will give a value between 0 and 1023. More details on this specific ADC can be found from [page 237 to 248 in the µ-controller's datasheet](pdf-files/datasheet-ATmega328P.pdf).
+
+The last trick to be done is converting the 0 to 1023 value to the range for our application. In below examples, colors and PWM outputs need to be set. All of these need byte-values. For PWM 0 to 255, and for RGB-colors (0..255,0..255,0..255). You could of course write some simple equations to apply the rule of three. However the C-language in the [Arduino IDE](https://www.arduino.cc/en/Main/Software) is having a very handy function for that, called [mapping](https://www.arduino.cc/en/reference/map). 
+```C
+recalculated_value = map(value, fromLow, fromHigh, toLow, toHigh);
+// example : x = map(511,0,1023,0,255)
+//           -> gives x = 127
+```
 ### The Electronics
 
 #### The Schematic
