@@ -97,9 +97,11 @@ In a minimum setup, pins 1 and 10 (power and ground), and at least one Px output
 The demo/test software has been written in the free [Arduino IDE](https://www.arduino.cc/en/Main/Software), or as [sourcecode](https://github.com/arduino/Arduino/).
 These examples are using the [servo library](https://www.arduino.cc/en/Reference/Servo), which is included in the Arduino IDE software, and [Adafruit's Neopixel library](https://github.com/adafruit/Adafruit_NeoPixel). All sketches can be found in the [source-folder](source/).
 
-#### Application example 1 : Robot-arm servo calibration
+#### Application example 1 : Robot servo calibration
 
 A basic [servo calibration application](source/robotarm-servo-calibration.ino) is available in the [source-folder](source/). The Arduino sketch contains extensive comments on how to connect and run the application. The basic idea is to first find the clockwise :leftwards_arrow_with_hook: and counterclockwise :arrow_right_hook: limits of a servo inside your mechanical construction. Secondly, in many construction you might also be interested in the mid-point between these to limits. And, this is not necessarily CW :leftwards_arrow_with_hook: plus CCW :arrow_right_hook: divided by two ! Next, in the serial monitor, you can read the settings to be used in your future application. By using the CW :leftwards_arrow_with_hook: and CCW :arrow_right_hook: limits as parameters 4 and 5 in the mapping function, you can easily prevent mechanical overshoot (and damage) while fine-tuning your mechanics. Before connecting your mechanical construction, it be a good idea to set the slider potentiometers at 50%, and to position your servos about half-way of their possible movement. When starting the application, the serial monitor will provide connection and setup info. Next, the software will slowly move the servos to the position as preset by the potentiometers. Once the sketch reaches the main-loop, things will be more reactive. So, handle with care :collision: :exclamation:
+
+[![Servo calibrater - test setup](images/servo-example-test-s.png)](images/servo-example-test.png)
 
 #### Application example 2 : RGB LED color mixer
 
