@@ -71,6 +71,14 @@ The PCB has been designed single-sided with wide traces for "kitchen-brew" produ
 
 [![PCB design](images/Slider-panel-pcb-s.png)](images/Slider-panel-pcb.png)
 
+#### BOM - bill of materials
+
+Part | Value | Package | Description  
+---- | ----- | ------- | -----------                                                                      
+R1,2,3,4 | 2,7kΩ | 0204/7             | resistor                                            
+P1,2,3,4 | 10kΩ  | SLIDER_POT_60_WLED | Bourns slider potentiometer (60mm) with LED
+CON1     | 1x10  | 1x10 90°           | 90° bent pin header
+
 #### Connection with a µ-controller board
 
 The board has been designed with a 10-way (90° bent) pin-header for easy connection with standard Dupont lines, typically used for testing during breadboard phase.
