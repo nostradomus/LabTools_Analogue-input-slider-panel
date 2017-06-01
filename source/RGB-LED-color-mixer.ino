@@ -41,6 +41,7 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(12, dataPIN, NEO_GRB + NEO_KHZ800);
 //  https://github.com/adafruit/Adafruit_NeoPixel)
 
 int bLevel = 127;                             // brightness level 0..255 (initial value at 50%)
+int checksum = 0;                             // RGB checksum, to only print to serial in case of changes
 
 uint32_t dark = strip.Color(0, 0, 0);         // LED pixel -> OFF
 uint32_t green = strip.Color(0, 255, 0);      // LED pixel -> green
@@ -54,6 +55,7 @@ uint32_t white = strip.Color(255, 255, 255);  // LED pixel -> white
 void setup() {
   Serial.begin(115200);                            // initialize the serial communication 
   Serial.println(".");
+  Serial.println(" ");
   Serial.println("*********************************************************");
   Serial.println("**             RGB LED color mixer - (c)2017           **");
   Serial.println("**  - Serial communication initialized                 **");
@@ -81,22 +83,22 @@ void setup() {
   for(uint16_t i=0; i<strip.numPixels(); i++) {strip.setPixelColor(i, red);}
   strip.show();
   Serial.println("RED..............");
-  delay(1000);
+  delay(1500);
   strip.setBrightness(127);
   for(uint16_t i=0; i<strip.numPixels(); i++) {strip.setPixelColor(i, green);}
   strip.show();
   Serial.println("...GREEN.........");
-  delay(1000);
+  delay(1500);
   strip.setBrightness(195);
   for(uint16_t i=0; i<strip.numPixels(); i++) {strip.setPixelColor(i, blue);}
   strip.show();
   Serial.println("........BLUE.....");
-  delay(1000);
+  delay(1500);
   strip.setBrightness(255);
   for(uint16_t i=0; i<strip.numPixels(); i++) {strip.setPixelColor(i, white);}
   strip.show();
   Serial.println("............WHITE");
-  delay(1000);
+  delay(1500);
   Serial.println("...and from here on you can start playing with the sliders...");
   Serial.println(" ");  
   }
@@ -119,7 +121,6 @@ void loop() {
 void runColorCalibrationProcedure() {
       // analogue values from the potentiometers
       int Rpot, Gpot, Bpot, bLevelpot;                 
-      int checksum = 0;
       // read the current values on the analogue inputs
       Rpot = analogRead(A0);
       int newR = map(Rpot, 0, 1023, 0, 255);
@@ -129,8 +130,11 @@ void runColorCalibrationProcedure() {
       int newB = map(Bpot, 0, 1023, 0, 255);
       bLevelpot = analogRead(A3);
       bLevel = map(bLevelpot, 0, 1023, 0, 255);
-      if (checksum != (newR + newG + newB + bLevel)) {
+      if (abs(checksum - (newR + newG + newB + bLevel)) > 3) {
           // update the LED's if any value has been changed on the analogue inputs
+          // you can change the integer value in the equation to obtain more or less updates
+          // 0 will give you all changes (might cause an enormous amount of serial communication)
+          // 3 will mask potentiometer jitter, but still provide close enough values for the mixed color
           checksum = newR + newG + newB + bLevel;
           // send the new values to the serial monitor
           Serial.print("Color : R-");
@@ -153,7 +157,6 @@ void runColorCalibrationProcedure() {
           strip.show();  
       }
 }
-
 
 
 
