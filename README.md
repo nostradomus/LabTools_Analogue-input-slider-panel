@@ -37,7 +37,7 @@ Simple projects don't need complicated specifications. However once you start, t
  - [x] build a proof-of-concept for the final [electronics](#electronics)
  - [x] write [code for the µ-controller](#µ-controller-code) respecting best-practices
  - [x] design and build a [state-of-the-art housing](#mechanical-construction)
- - [ ] validate the [application examples](#µ-controller-code) with in-line documentation 
+ - [ ] validate the [application examples](#µ-controller-code) with in-line documentation
 
 ## Technical details
 
@@ -104,6 +104,8 @@ A basic [servo calibration application](source/robotarm-servo-calibration.ino) i
 #### Application example 2 : RGB LED color mixer
 
 A basic [color mixer application](source/RGB-LED-color-mixer.ino) is available in the [source-folder](source/). The Arduino sketch contains extensive comments on how to connect and run the application. The basic idea is to brew your own color by mixing R(ed), G(reen) and B(lue) until you like the result visually. Next, in the serial monitor, you can read the settings to be used in your future application (0..255,0..255,0..255). Slider number 4 will let you play with the overall brightness, and provide feedback in the serial monitor accordingly. When starting the application, the serial monitor will provide connection and setup info, followed by a short LED test.
+
+For those who prefer more fancy feedback, an extended version of the [color mixer application](source/RGB-LED-color-mixer-with-indicators.ino) is also available. This version has code implemented to use the LED's on the slider buttons. When one of the sliders is moved, its button-LED will switch ON. This indicates that the associated value had a change above the preset threshold (configurable value). The LED will remain ON for three seconds (configurable value).
 
 ### Mechanical construction
 
