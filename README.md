@@ -37,7 +37,7 @@ Simple projects don't need complicated specifications. However once you start, t
  - [x] build a proof-of-concept for the final [electronics](#electronics)
  - [x] write [code for the µ-controller](#µ-controller-code) respecting best-practices
  - [x] design and build a [state-of-the-art housing](#mechanical-construction)
- - [ ] write an end-user manual
+ - [ ] validate the [application examples](#µ-controller-code) with in-line documentation 
 
 ## Technical details
 
