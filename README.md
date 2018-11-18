@@ -1,5 +1,7 @@
 # **LabTools** : Analogue input slider panel
 
+![](https://img.shields.io/badge/project%20status-released-green.svg)
+
 ## What
 
 This slider panel is part of a homemade toolset of modules to simplify the r&d phase of my µ-controller projects. It consists of four [linear slider potentiometers](pdf-files/Bourns-slider-potentiometer-datasheet.pdf), which are connected as [voltage dividers](https://en.wikipedia.org/wiki/Voltage_divider). Built with the component values as stated in the bill-of-materials, the panel is optimized for 0 to 5V ADC's. Thanks to its universal layout, the module can easily be adapted for other voltage ranges, by changing the resistor values.
@@ -148,4 +150,4 @@ If you like it, have fun with it (at your own risk of course :-D), and especiall
 
 Oh, and when using anything from this repository, it is highly appreciated if you mention its origin.
 
-If you would like to use any of my work (or the whole project) for commercial use, just [contact me :email:](http://nostradomus.ddns.net/contactform.html), so we can add the appropriate license, which best fits your business.
+If you would like to use any of my work (or the whole project) for commercial use, just [contact me :email:](http://nostradomus.ddns.net/contactform.html), so we can agree on an appropriate license, which best fits your business.
