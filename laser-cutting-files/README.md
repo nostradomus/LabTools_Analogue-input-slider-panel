@@ -4,7 +4,9 @@ For the initial built, 3 mm plexi material has been used.
 
 When using another thickness, the length of the srews and bolts should be adapted.
 
-The .cdr-files have been created with CorelDraw, and have been optimized for [Trotec laser and engraving machines](https://www.troteclaser.com/en/). Three different RGB-colors have been used :
+The .cdr-files have been created with CorelDraw, and have been optimized for [Trotec laser and engraving machines](https://www.troteclaser.com/en/). The .svg-files contain the same drawings (created with [free InkScape](https://inkscape.org)), and might be better for processing in [open-hardware laser-cutting machines](https://onlfait.ch/fablab/services/machines/).
+
+Three different RGB-colors have been used :
 
  - black : engraving
  - red : internal cut-outs
